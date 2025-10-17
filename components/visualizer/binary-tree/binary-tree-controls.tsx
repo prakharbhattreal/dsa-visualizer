@@ -82,7 +82,7 @@ export function BinaryTreeControls({
               Post-Order
             </Button>
             <Button 
-              variant="destructive" 
+              variant="success" 
               onClick={onClear}
               className="w-full"
             >

@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { Josefin_Sans } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
-import { ThemeProvider } from "@/components/global/theme-provider";
+import { ThemeProvider } from "@/components/element/theme-provider";
 const inter = Josefin_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: "DSA Visualizer",
-  description: "DS Visualizer is a tool for visualizing data structures",
+  description: "DSA Visualizer helps students for visualizing data structures",
 };
 
 export default function RootLayout({
@@ -26,6 +26,7 @@ export default function RootLayout({
           >
             <div className="min-h-screen flex flex-col">
               <div className="flex-1">
+                {/* <Navbar /> */}
                 {children}
               </div>
             </div>

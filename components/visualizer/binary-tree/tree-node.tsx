@@ -2,7 +2,7 @@
 
 import { Handle, Position } from 'reactflow'
 import { motion } from 'framer-motion'
-
+  
 export default function TreeNode({ data }: { data: { id: string, value: number, highlighted: boolean } }) {
   return (
     <>

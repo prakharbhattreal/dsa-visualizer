@@ -10,6 +10,7 @@ typedef struct Node {
     int data;
     struct Node* next;
 } Node;
+
 ```
 
 ## Singly Linked List Implementation
@@ -207,6 +208,20 @@ void reverseTraverse(DNode* tail) {
     } while (current != tail && current != NULL);
     printf("NULL\n");
 }
+
+
+## Operations : Time Comlpexities
+```text
++--------------------------------------------------------------+
+| Linked List Explanation         |  Time Complexities Card    |
+|                                 |  ------------------------  |
+|                                 |  Insert (Front)  →  O(1)   |
+|                                 |  Insert (End)    →  O(n)   |
+|                                 |  Delete (Front)  →  O(1)   |
+|                                 |  Delete (End)    →  O(n)   |
+|                                 |  Search          →  O(n)   |
++--------------------------------------------------------------+
+
 ```
 
 ## Applications

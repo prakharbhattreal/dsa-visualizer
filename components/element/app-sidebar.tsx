@@ -1,16 +1,30 @@
-"use client"
+"use client";
 
-import { Binary, Home, Database, BrainCircuit, TreePine, List, SquareStack, SquareChevronLeft, Equal, MessageSquare, X, Hash, ArrowRightLeft } from "lucide-react"
+import {
+  Binary,
+  Home,
+  Database,
+  TreePine,
+  List,
+  SquareStack,
+  SquareChevronLeft,
+  CircuitBoard,
+  ArrowRightLeft,
+  Hash,
+  X,
+  Equal,
+  MessageSquare,
+  ArrowUpNarrowWide,
+  SearchCodeIcon,
+} from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
-  SidebarFooter,
   SidebarHeader,
   SidebarRail,
-} from "@/components/ui/sidebar"
-import { NavMain } from "@/components/navigation/nav-main"
-import { NavProjects } from "@/components/navigation/nav-projects"
-import { NavUser } from "@/components/navigation/nav-user"
+} from "@/components/ui/sidebar";
+import { NavMain } from "@/components/navigation/nav-main";
+import { NavProjects } from "@/components/navigation/nav-projects";
 
 const navItems = [
   {
@@ -23,7 +37,7 @@ const navItems = [
     url: "/visualizer",
     icon: Database,
   },
-]
+];
 
 const dataStructures = [
   {
@@ -31,13 +45,13 @@ const dataStructures = [
     url: "/visualizer/stack",
     icon: SquareStack,
     description: "LIFO data structure with push and pop operations",
-  },  
+  },
   {
     name: "Queue",
     url: "/visualizer/queue",
     icon: SquareChevronLeft,
     description: "FIFO data structure with enqueue and dequeue operations",
-  },  
+  },
   {
     name: "Linked List",
     url: "/visualizer/linked-list",
@@ -51,18 +65,12 @@ const dataStructures = [
     description: "Basic binary tree with BST properties",
   },
   {
-    name: "AVL Tree",
-    url: "/visualizer/avl-tree",
-    icon: TreePine,
-    description: "Self-balancing binary search tree",
-  },
-  {
     name: "Heap",
     url: "/visualizer/heap",
     icon: Database,
     description: "Binary heap implementation with max/min heap variants",
   },
-]
+];
 
 const applications = [
   {
@@ -84,10 +92,16 @@ const applications = [
     description: "Multiply two polynomials using linked lists",
   },
   {
-    name: "Huffman Coding",
-    url: "/visualizer/huffman",
-    icon: Hash,
+    name: "Merge Sort",
+    url: "/visualizer/merge-sort",
+    icon: ArrowUpNarrowWide,
     description: "Huffman coding is a popular data compression technique that creates variable-length prefix codes based on the frequency of characters in the input text.",
+  },
+  {
+    name: "Linear Search",
+    url: "/visualizer/linear-search",
+    icon: SearchCodeIcon,
+    description: "Linear search, also known as sequential search, is a straightforward algorithm used to find a target element within a list or array.",
   },
   {
     name: "Dijkstra's Algorithm",
@@ -101,8 +115,8 @@ export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarHeader>
-        <div className="px-6 py-4 border-b flex items-center gap-2">
-          <BrainCircuit className="h-6 w-6" />
+        <div className="px-6 py-1 border-b flex items-center gap-2">
+          <CircuitBoard className="h-6 w-6" />
           <h1 className="text-sm font-semibold">Data Structure Visualizer</h1>
         </div>
       </SidebarHeader>
@@ -110,7 +124,7 @@ export function AppSidebar() {
         <NavMain items={navItems} />
         <NavProjects
           title="Data Structures"
-          projects={dataStructures.map(ds => ({
+          projects={dataStructures.map((ds) => ({
             name: ds.name,
             url: ds.url,
             icon: ds.icon,
@@ -118,7 +132,7 @@ export function AppSidebar() {
           }))}
         />
         <NavProjects
-          title="Applications"
+          title="Applications/Algorithms"
           projects={applications.map(app => ({
             name: app.name,
             url: app.url,
@@ -127,16 +141,7 @@ export function AppSidebar() {
           }))}
         />
       </SidebarContent>
-      {/* <SidebarFooter>
-        <NavUser
-          user={{
-            name: "Guest User",
-            email: "guest@example.com",
-            avatar: "",
-          }}
-        />
-      </SidebarFooter> */}
       <SidebarRail />
     </Sidebar>
-  )
-} 
+  );
+}

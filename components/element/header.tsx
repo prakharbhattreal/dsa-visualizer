@@ -3,7 +3,7 @@
 import * as React from "react"
 import Link from "next/link"
 import { BrainCircuit, Github } from "lucide-react"
-import { ModeToggle } from "@/components/global/mode-toggle"
+import { ModeToggle } from "@/components/element/mode-toggle"
 import {
   NavigationMenu,
   NavigationMenuItem,

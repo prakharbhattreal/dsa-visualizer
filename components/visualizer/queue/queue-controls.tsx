@@ -67,7 +67,7 @@ export function QueueControls({
           <Button 
             onClick={onClear}
             disabled={isAnimating || isEmpty}
-            variant="destructive"
+            variant="success"
           >
             Clear
           </Button>

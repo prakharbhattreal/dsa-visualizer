@@ -51,6 +51,7 @@ export function StackControls({
           <Button 
             onClick={handlePush}
             disabled={isAnimating || isFull}
+            variant="destructive"
           >
             Push
           </Button>
@@ -67,7 +68,7 @@ export function StackControls({
           <Button 
             onClick={onClear}
             disabled={isAnimating || isEmpty}
-            variant="destructive"
+            variant="success"
           >
             Clear
           </Button>

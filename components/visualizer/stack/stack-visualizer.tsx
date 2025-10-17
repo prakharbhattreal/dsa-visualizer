@@ -36,11 +36,11 @@ export function StackVisualizer({ content }: StackVisualizerProps) {
       <Tabs defaultValue="visualization" className="w-full space-y-6">
         <TabsList className="grid w-full grid-cols-2">
           <TabsTrigger value="visualization">Visualization</TabsTrigger>
-          <TabsTrigger value="explanation">Explanation</TabsTrigger>
+          <TabsTrigger value="explanation">Insights</TabsTrigger>
         </TabsList>
         
         <TabsContent value="visualization" className="space-y-6">
-          <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
             <div className="xl:col-span-1 space-y-6">
               <StackControls 
                 onPush={push}
@@ -52,7 +52,7 @@ export function StackVisualizer({ content }: StackVisualizerProps) {
               />
               <StackOperations operations={operations} />
             </div>
-            <div className="xl:col-span-2">
+            <div className="xl:col-span-1">
               <StackDisplay 
                 stack={stack}
                 highlightedIndex={highlightedIndex}

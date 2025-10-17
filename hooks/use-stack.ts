@@ -15,10 +15,8 @@ export function useStack(maxSize: number = 8) {
     setIsAnimating(true)
     setOperations(prev => [...prev, { type: 'push', value, timestamp: Date.now() }])
 
-    // Highlight the new position
     setHighlightedIndex(stack.length)
     
-    // Add new node with animation delay
     await new Promise(resolve => setTimeout(resolve, 500))
     
     setStack(prev => [
@@ -41,7 +39,6 @@ export function useStack(maxSize: number = 8) {
     setIsAnimating(true)
     setOperations(prev => [...prev, { type: 'pop', value: stack[stack.length - 1].value, timestamp: Date.now() }])
 
-    // Highlight the top element
     setHighlightedIndex(stack.length - 1)
     
     await new Promise(resolve => setTimeout(resolve, 500))

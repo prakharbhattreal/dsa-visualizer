@@ -139,12 +139,17 @@ int main() {
 
 ## Example Conversions
 
+```text
++---------------------------------------+
 | Infix Expression | Postfix Expression |
-|-----------------|-------------------|
-| `a + b` | `a b +` |
-| `a + b * c` | `a b c * +` |
-| `(a + b) * c` | `a b + c *` |
-| `a + b * c / d` | `a b c * d / +` |
+|------------------|--------------------|
+| a + b            | a b +              |
+| a + b * c        | a b c * +          |
+| (a + b) * c      | a b + c *          |
+| a + b * c / d    | a b c * d / +      |
++---------------------------------------+
+
+```
 
 ## Applications
 - Expression evaluation in compilers
